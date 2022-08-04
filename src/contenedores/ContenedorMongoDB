@@ -1,0 +1,62 @@
+
+class ContenedorMongoDB {
+    constructor(DAO) {
+        this.DAO = DAO;
+    };
+
+    async listarTodo() {
+        try {
+          const all = await this.DAO.find({});
+          return JSON.parse(all);
+        } catch (error) {
+          return error;
+        }
+    };
+
+    async listarPorId(id) {
+        try {
+          const element = await this.DAO.find({_id:id});
+          return element;
+        } catch (error) {
+          return error;
+        }
+    };
+
+    async crearElemento(title,price,thumbnail,stock) {
+        try {
+          const element = await this.DAO.save({title: title,price: price,thumbnail: thumbnail,stock: stock});
+          return element;
+        } catch (error) {
+          return error;
+        }
+    };
+
+    async actualizarElemento(id, title,price,thumbnail,stock) {
+        try {
+          const newElement =  await this.DAO.updateOne({_id:id},{$set:{title: title,price: price,thumbnail: thumbnail,stock: stock}});
+          return newElement;
+        } catch (error) {
+          return error;
+        }
+    };
+
+    async borrarPorId(id) {
+        try {
+          const element = await this.DAO.deleteOne({_id:id})
+          return element;
+        } catch (error) {
+          return error;
+        }
+    };
+
+    async borrarTodo() {
+        try {
+          const element = await this.DAO.deleteMany({})
+          return element;
+        } catch (error) {
+          return error;
+        }
+    };
+}; 
+
+export { ContenedorMongoDB };
