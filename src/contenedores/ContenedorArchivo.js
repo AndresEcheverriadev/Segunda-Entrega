@@ -1,8 +1,8 @@
 import fs from "fs";
 
 class ContenedorArchivo {
-  constructor(ruta) {
-    this.ruta = ruta;
+  constructor(filename) {
+    this.ruta = `../Database/${filename}.json`;
   };
 
   async listarTodo() {

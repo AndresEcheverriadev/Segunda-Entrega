@@ -1,13 +1,13 @@
 import { ContenedorArchivo } from "../../contenedores/ContenedorArchivo";
 import { config } from '../../config/config.js'
 
-class ProductosDaoArchivo extends ContenedorArchivo {
+class CarritosDaoArchivo extends ContenedorArchivo {
     constructor() {
-        super(config.archivodb.products);
+        super(config.archivodb.carts);
     }
 
     async desconectar() {
     }
 };
 
-export { ProductosDaoArchivo }
+export { CarritosDaoArchivo  }

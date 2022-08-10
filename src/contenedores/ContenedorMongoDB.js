@@ -1,13 +1,14 @@
+import mongoose from "mongoose";
 
 class ContenedorMongoDB {
-    constructor(DAO) {
-        this.DAO = DAO;
-    };
+  constructor({ collection, schema }) {
+    this.collection = mongoose.model(collection, schema);
+  }
 
     async listarTodo() {
         try {
-          const all = await this.DAO.find({});
-          return JSON.parse(all);
+          const all = await this.collection.find({});
+          return all;
         } catch (error) {
           return error;
         }
@@ -15,7 +16,7 @@ class ContenedorMongoDB {
 
     async listarPorId(id) {
         try {
-          const element = await this.DAO.find({_id:id});
+          const element = await this.collection.find({_id:id});
           return element;
         } catch (error) {
           return error;
@@ -24,16 +25,16 @@ class ContenedorMongoDB {
 
     async crearElemento(title,price,thumbnail,stock) {
         try {
-          const element = await this.DAO.save({title: title,price: price,thumbnail: thumbnail,stock: stock});
+          const element = await this.collection.save({title: title,price: price,thumbnail: thumbnail,stock: stock});
           return element;
         } catch (error) {
           return error;
         }
     };
 
-    async actualizarElemento(id, title,price,thumbnail,stock) {
+    async actualizarElemento(id,title,price,thumbnail,stock) {
         try {
-          const newElement =  await this.DAO.updateOne({_id:id},{$set:{title: title,price: price,thumbnail: thumbnail,stock: stock}});
+          const newElement =  await this.collection.updateOne({_id:id},{$set:{title: title,price: price,thumbnail: thumbnail,stock: stock}});
           return newElement;
         } catch (error) {
           return error;
@@ -42,7 +43,7 @@ class ContenedorMongoDB {
 
     async borrarPorId(id) {
         try {
-          const element = await this.DAO.deleteOne({_id:id})
+          const element = await this.collection.deleteOne({_id:id})
           return element;
         } catch (error) {
           return error;
@@ -51,7 +52,7 @@ class ContenedorMongoDB {
 
     async borrarTodo() {
         try {
-          const element = await this.DAO.deleteMany({})
+          const element = await this.collection.deleteMany({})
           return element;
         } catch (error) {
           return error;

@@ -1,15 +1,10 @@
-import mongoose from "mongoose";
 import { ContenedorMongoDB } from "../../contenedores/ContenedorMongoDB"; 
-import { productosSchema } from "../../schemas/ProductosSchema";
+import { ProductosSchema } from "../../schemas/ProductosSchema";
 
-class ProductosDaoArchivo extends ContenedorMongoDB {
+class ProductosDaoMongo extends ContenedorMongoDB {
     constructor() {
-        super(mongoose.model('productos',productosSchema))
+        super({collection: 'productos', schema: ProductosSchema});
     }
-
-    async desconectar() {
-    }
-
 };
 
-export { ProductosDaoArchivo }
+export { ProductosDaoMongo }
