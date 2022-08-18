@@ -1,8 +1,8 @@
 [
   {
-    "nombre": "iPhoneX",
-    "precio": "1500",
-    "foto": "https://cdn4.iconfinder.com/data/icons/apple-products-2026/512/iPhone_X_home-screen-512.png",
+    "title": "iPhoneX",
+    "price": "1500",
+    "thumbnail": "https://cdn4.iconfinder.com/data/icons/apple-products-2026/512/iPhone_X_home-screen-512.png",
     "codigo": "IPX",
     "stock": "26",
     "timestamp": "2022-07-10T14:06:03.000Z",
@@ -10,9 +10,9 @@
     "id": 1
   },
   {
-    "nombre": "iMac",
-    "precio": "6500",
-    "foto": "https://cdn4.iconfinder.com/data/icons/apple-products-2026/512/iMac-512.png",
+    "title": "iMac",
+    "price": "4500",
+    "thumbnail": "https://cdn4.iconfinder.com/data/icons/apple-products-2026/512/iMac-512.png",
     "codigo": "IMA",
     "stock": "5",
     "timestamp": "2022-07-10T17:32:09.000Z",
@@ -20,9 +20,9 @@
     "id": 2
   },
   {
-    "nombre": "Apple TV",
-    "precio": "800",
-    "foto": "https://cdn1.iconfinder.com/data/icons/apple-products-2026/512/Apple_TV__Ovladac-512.png",
+    "title": "Apple TV",
+    "price": "800",
+    "thumbnail": "https://cdn1.iconfinder.com/data/icons/apple-products-2026/512/Apple_TV__Ovladac-512.png",
     "codigo": "ATV",
     "stock": "12",
     "timestamp": "2022-07-10T18:28:03.000Z",
@@ -30,9 +30,9 @@
     "id": 3
   },
   {
-    "nombre": "Ipad",
-    "precio": "1700",
-    "foto": "https://cdn4.iconfinder.com/data/icons/apple-products-2026/512/iPad_White_Front-512.png",
+    "title": "Ipad",
+    "price": "1700",
+    "thumbnail": "https://cdn4.iconfinder.com/data/icons/apple-products-2026/512/iPad_White_Front-512.png",
     "codigo": "PAD",
     "stock": "6",
     "timestamp": "2022-07-10T16:53:11.000Z",
@@ -40,10 +40,10 @@
     "id": 4
   },
   {
-    "nombre": "",
+    "title": "TestFilesystem",
     "codigo": "",
-    "foto": "",
-    "precio": "",
+    "thumbnail": "",
+    "price": "",
     "stock": "",
     "id": 5,
     "timestamp": "2022-07-14T03:42:55.504Z"

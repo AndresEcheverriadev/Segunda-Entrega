@@ -1,11 +1,11 @@
 import { Router } from "express";
-import { productDao } from "../daos/productos/productosDao";
-import { cartDao } from "../daos/carritos/carritos";
+import { ProductDao } from "../daos/index.js";
+import { CartDao } from "../daos/index.js";
 
 const cartsRouter = Router();
 
-const ProductApi = productDao;
-const CartApi = cartDao;
+const ProductApi = ProductDao
+const CartApi = CartDao ;
 
 const isAdmin = true;
 

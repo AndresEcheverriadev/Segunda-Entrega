@@ -2,3 +2,5 @@
 node_modules
 resueltos
 .envclear
+.env
+/firebase/serviceAccount.js

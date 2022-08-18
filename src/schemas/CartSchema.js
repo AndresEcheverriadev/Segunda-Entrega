@@ -1,10 +1,10 @@
 import mongoose from "mongoose";
 const { Schema, model } = mongoose;
-import { ProductosSchema } from "./ProductosSchema";
+import { ProductosSchema } from "./ProductosSchema.js";
 
 const CarritosCollection = "carts";
 
-const CartsSchema = new Schema(
+const CartSchema = new Schema(
     {
         nombre: { type: String, required: true, max: 100 },
         products: [ProductosSchema],
@@ -15,6 +15,6 @@ const CartsSchema = new Schema(
     }
 );
 
-const CarritosModel = model(CarritosCollection, CartsSchema);
+const CarritosModel = model(CarritosCollection, CartSchema);
 
-export { CarritosModel,CartsSchema }
+export { CarritosModel,CartSchema }

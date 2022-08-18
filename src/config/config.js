@@ -1,3 +1,5 @@
+import dotenv from "dotenv";
+dotenv.config();
 
 const port = 8080;
 
@@ -9,10 +11,17 @@ const db = {
 };
 
 const config =  {
-    persistences: DBS,
+    persistences: db,
     Archivodb: {
     products: "productos",
     carts: "carritos",
+    },
+    MongoDB: {
+        url: process.env.MongoURL,
+        dbName: process.env.MongoDBName,
+    },
+    Firebase: {
+        databaseURL: process.env.databaseURL
     },
     server: {
         port: process.env.port ?? port,
@@ -22,7 +31,6 @@ const config =  {
             products: '/api/productos',
             carts: '/api/carrito'
         }
-
     }
 };
 

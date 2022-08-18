@@ -1,10 +1,10 @@
-import { ContenedorMongoDB } from "../../contenedores/ContenedorMongoDB"; 
-import { ProductosSchema } from "../../schemas/ProductosSchema";
+import { ContenedorMongoDB } from "../../contenedores/ContenedorMongoDB.js"; 
+import { ProductosSchema } from "../../schemas/ProductosSchema.js";
 
-class ProductosDaoMongo extends ContenedorMongoDB {
+class ProductosDaoMongoDB extends ContenedorMongoDB {
     constructor() {
         super({collection: 'productos', schema: ProductosSchema});
     }
 };
 
-export { ProductosDaoMongo }
+export { ProductosDaoMongoDB }

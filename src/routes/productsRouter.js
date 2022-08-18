@@ -1,9 +1,9 @@
 import { Router } from "express";
-import { productDao } from "../daos/productos/productosDao";
+import { ProductDao } from "../daos/index.js";
 
 const productsRouter = Router();
 
-const ProductApi = productDao;
+const ProductApi = ProductDao;
 
 const isAdmin = true;
 const errorHandles = {

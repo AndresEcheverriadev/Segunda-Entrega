@@ -1,27 +1,24 @@
 <div class="productContainer">
         <h2 class="title">Vista de productos</h2>
             {{#if products.length}}
-                <div class="titleHeader">
-                    <h5 class="titleData">Nombre</h5>
-                    <h5 class="titleData">Precio</h5>
-                    <h5 class="titleData">Stock</h5>
-                    <h5 class="titleData">Código</h5>
-                    <h5 class="titleFoto">Foto URL</h5>
-                </div>
+                
                 {{#each products}}
                     <div class="productDataContainer">
                         <div class="productButtons">
                             <button>Actualizar</button>
                             <button>Eliminar</button>
                         </div>
-                        <div class="DataGroup">
-                            <div class="productData"><h5> {{this.nombre}}</h5></div>
-                            <div class="productData"><h5>${{this.precio}}</h5></div>
-                            <div class="productData"><h5> {{this.stock}}</h5></div>
-                            <div class="productData"><h5> {{this.codigo}}</h5></div>
-                            <div class="productThumbnail"><img src={{this.foto}} alt=""></img></div>
+                        <div class="titleHeader">
+                            <h5 class="titleData">Nombre</h5>
+                            <h5 class="titleData">Precio</h5>
+                            <h5 class="titleData">Stock</h5>
                         </div>
-                        <div class="productDescription"><h6>{{this.descripcion}}</h6></div>
+                        <div class="DataGroup">
+                            <div class="productData"><h5> {{this.title}}</h5></div>
+                            <div class="productData"><h5>${{this.price}}</h5></div>
+                            <div class="productData"><h5> {{this.stock}}</h5></div>
+                            <div class="productThumbnail"><img src={{this.thumbnail}} alt=""></img></div>
+                        </div>
                     </div>
                 {{/each}}
 
