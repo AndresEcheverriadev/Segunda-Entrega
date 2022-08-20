@@ -1,8 +1,8 @@
 import pkg from 'firebase-admin'
+import { config } from "../config/config.js";
 const admin = pkg;
 const db = admin.firestore();
-// import { serviceAccount } from '../../firebase/serviceAccount.js'
-import { config } from "../config/config.js";
+
 const serviceAccount = {
   "type": "service_account",
   "project_id": "entrega2backend",
@@ -35,5 +35,5 @@ const initFirebase = async () => {
     initFirebase ,
   };
   
-  export { FirebaseService,db,admin };
+  export { FirebaseService,admin,db };
   

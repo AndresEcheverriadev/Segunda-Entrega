@@ -1,4 +1,6 @@
-import { db,admin} from '../services/firebaseService.js'
+import pkg from 'firebase-admin';
+const admin = pkg;
+const db = admin.firestore();
 
 class ContenedorFirebase {
     constructor({collection}) {
