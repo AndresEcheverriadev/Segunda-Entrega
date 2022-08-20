@@ -1,16 +1,17 @@
+import { db,admin} from '../services/firebaseService.js'
 
 class ContenedorFirebase {
-    constructor(DAO) {
-        this.DAO = DAO;
+    constructor({collection}) {
+        this.query = db.collection(collection)
     };
 
     async listarTodo() {
         try {
-          const all = await this.DAO.get();
+          const all = await this.query.get();
           let docs = all.docs;
           const response = docs.map((doc) => ({
             id:doc.id,
-            title: doc.data().name,
+            title: doc.data().title,
             price: doc.data().price,
             thumbnail: doc.data().thumbnail,
             stock: doc.data().stock,

@@ -1,9 +1,9 @@
 import { ContenedorFirebase } from "../../contenedores/ContenedorFirebase.js"; 
-import { ProductosSchema } from "../../schemas/ProductosSchema.js";
+import { config } from '../../config/config.js'
 
 class ProductosDaoFirebase extends ContenedorFirebase {
     constructor() {
-        super({collection: 'productos', schema: ProductosSchema});
+        super({collection:config.Firebase.productosCollection});
     }
 };
 

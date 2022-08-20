@@ -21,7 +21,10 @@ const config =  {
         dbName: process.env.MongoDBName,
     },
     Firebase: {
-        databaseURL: process.env.databaseURL
+        databaseURL: process.env.databaseURL,
+        privateKey: process.env.private_key,
+        productosCollection: '/productos',
+        carritosCollection: '/carritos'
     },
     server: {
         port: process.env.port ?? port,
